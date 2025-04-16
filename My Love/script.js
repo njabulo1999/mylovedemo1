@@ -207,39 +207,31 @@ function createHearts() {
 }
 
 function startPuzzle() {
-    // Debug: Check if function is being called
-    console.log("startPuzzle() called");
-    
     // Select a random puzzle
     const randomIndex = Math.floor(Math.random() * puzzles.length);
     const selectedPuzzle = puzzles[randomIndex];
     
-    // Store the puzzle data (using localStorage instead of sessionStorage for reliability)
-    localStorage.setItem("currentPuzzle", JSON.stringify(selectedPuzzle));
-    localStorage.setItem("attempts", "0");
-    
-    // Debug: Check what's being stored
-    console.log("Storing puzzle:", selectedPuzzle);
+    // Store all puzzle data in sessionStorage
+    sessionStorage.setItem("puzzleQuestion", selectedPuzzle.question);
+    sessionStorage.setItem("puzzleOptions", JSON.stringify(selectedPuzzle.options));
+    sessionStorage.setItem("puzzleAnswer", selectedPuzzle.answer);
+    sessionStorage.setItem("attempts", "0");
     
     // Redirect to puzzle page
-    try {
-        window.location.href = "puzzle.html";
-        console.log("Redirect initiated");
-    } catch (error) {
-        console.error("Redirect failed:", error);
-        alert("Oops! Couldn't load the puzzle. Please try again.");
-    }
+    window.location.href = "puzzle.html";
 }
 
 function loadPuzzle() {
     const puzzleElement = document.getElementById('puzzle-question');
     const optionsContainer = document.getElementById('options-container');
-    const storedQuestion = sessionStorage.getItem("puzzleQuestion");
-    const storedOptions = sessionStorage.getItem("puzzleOptions");
     
-    if (storedQuestion && storedOptions) {
-        puzzleElement.textContent = storedQuestion;
-        const options = JSON.parse(storedOptions);
+    // Get data from sessionStorage
+    const question = sessionStorage.getItem("puzzleQuestion");
+    const options = JSON.parse(sessionStorage.getItem("puzzleOptions"));
+    const answer = sessionStorage.getItem("puzzleAnswer");
+    
+    if (question && options && answer) {
+        puzzleElement.textContent = question;
         
         optionsContainer.innerHTML = '';
         options.forEach(option => {
