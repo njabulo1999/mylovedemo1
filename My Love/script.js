@@ -207,15 +207,28 @@ function createHearts() {
 }
 
 function startPuzzle() {
-    // Select random puzzle
-    const selectedPuzzle = puzzles[Math.floor(Math.random() * puzzles.length)];
-    sessionStorage.setItem("puzzleQuestion", selectedPuzzle.question);
-    sessionStorage.setItem("puzzleOptions", JSON.stringify(selectedPuzzle.options));
-    sessionStorage.setItem("puzzleAnswer", selectedPuzzle.answer);
-    sessionStorage.setItem("attempts", "0");
+    // Debug: Check if function is being called
+    console.log("startPuzzle() called");
+    
+    // Select a random puzzle
+    const randomIndex = Math.floor(Math.random() * puzzles.length);
+    const selectedPuzzle = puzzles[randomIndex];
+    
+    // Store the puzzle data (using localStorage instead of sessionStorage for reliability)
+    localStorage.setItem("currentPuzzle", JSON.stringify(selectedPuzzle));
+    localStorage.setItem("attempts", "0");
+    
+    // Debug: Check what's being stored
+    console.log("Storing puzzle:", selectedPuzzle);
     
     // Redirect to puzzle page
-    window.location.href = "puzzle.html";
+    try {
+        window.location.href = "puzzle.html";
+        console.log("Redirect initiated");
+    } catch (error) {
+        console.error("Redirect failed:", error);
+        alert("Oops! Couldn't load the puzzle. Please try again.");
+    }
 }
 
 function loadPuzzle() {
