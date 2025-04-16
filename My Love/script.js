@@ -289,9 +289,9 @@ function updateLoveMeter() {
     } else if (width >= 75) {
         feedback.textContent = "One more try and I'm yours! 🥺👉👈";
     } else if (width >= 50) {
-        feedback.textContent = "Halfway to stealing my soul! 😈💘";
+        feedback.textContent = "Halfway to woza la! 😈💘";
     } else if (width >= 25) {
-        feedback.textContent = "You're warming up my heart! ❤️🔥";
+        feedback.textContent = "You're warming up my heart, I'll warm up your p... coughs*! ❤️🔥";
     }
 }
 
