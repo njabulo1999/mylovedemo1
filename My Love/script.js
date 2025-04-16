@@ -5,6 +5,11 @@ const puzzles = [
         answer: "August 13"
     },
     { 
+        question: "How many Love letters have I written for you?", 
+        options: ["10", "5", "8", "9"], 
+        answer: "August 13"
+    },
+    { 
         question: "What do I love doing with you?", 
         options: ["Watch a movie", "Kissing you like crazy", "Smacking your bunz", "None of the above"], 
         answer: "Kissing you like crazy"
@@ -15,14 +20,34 @@ const puzzles = [
         answer: "You"
     },
     { 
-        question: "What is the first movie we watched together?", 
-        options: ["Planes", "Train to Busan", "Deadpool", "My Wife & Kids"], 
-        answer: "Train to Busan"
+        question: "How many glasses do I have?", 
+        options: ["1", "2", "None", "28"], 
+        answer: "1"
+    },
+    { 
+        question: "What is your dream job?", 
+        options: ["House Wife", "DJ", "Tech Speacalist", "Fashion Designer"], 
+        answer: "Fashion Designer"
+    },
+    { 
+        question: "What is my dream job?", 
+        options: ["Tech Specialist", "Software Developer", "Web Developer", "DJ"], 
+        answer: "Software Developer"
+    },
+    { 
+        question: "What did I get you for christmas?", 
+        options: ["Shoes", "A Ring", "Pringlesr", "A DJ"], 
+        answer: "Shoes"
+    },
+    { 
+        question: "When was our first date?", 
+        options: ["28 August", "28 September", "What First Date?", "24 August"], 
+        answer: "24 August"
     },
     { 
         question: "How many months have we been together?", 
         options: ["15", "I don't remember all that", "7", "8"], 
-        answer: "7"
+        answer: "8"
     },
     { 
         question: "Let me smack your bunz with it?", 
@@ -38,6 +63,11 @@ const puzzles = [
         question: "I lose ... when you're not next to me", 
         options: ["Barbie Dreams", "Bodak Yellow", "Control", "Biri Marung"], 
         answer: "Control"
+    },
+    { 
+        question: "What is my middle name?", 
+        options: ["JoJo Tank", "Nkosnathi", "Nkosana", "Nkomba"], 
+        answer: "Nkosana"
     },
     { 
         question: "What's my favourite food", 
@@ -61,51 +91,43 @@ const romanticMessages = [
     "Almost perfect! Let's practice kissing more 😘",
     "Need you now and forever ❤️",
     "I'd choose you in every lifetime",
-    "You're my favorite notification 🔔",
-    "Stealing kisses since 2023",
+    "There's no one I love more in this world than you",
+    "Stealing kisses since 2024",
     "Home isn't a place, it's wherever you are",
     "Mam' wabo ❤️",
     "Ellery's Mom 👶🍼",
     "Let's get married one time 💍",
-    "You're the marshmallow to my hot chocolate",
+    "You are the Zo to my Mba. Get it?",
     "My heart does backflips when you're near!",
     "Officially addicted to your love 💊",
     "100% match compatibility! 🧪",
-    "You had me at 'hello'...",
-    "My favorite hello and hardest goodbye",
-    "Every love story is beautiful, but ours is my favorite",
-    "I love you more than pizza!",
+    "You had me at 'sdakiwe sdakiwe sbal'...",
+    "My favorite Good morning and hardest Goodnight",
+    "Every love story is beautiful, but ours is th only one that matters,
+    "I love you more than Burgers!",
     "You're my favorite thought every morning",
     "My heart recognized you first",
-    "You're my favorite place to be",
-    "I'd pick you even in a room full of supermodels",
+    "You're my favorite place to be inside of... I mean *cough",
     "You're my favorite kind of trouble",
-    "I'd still choose you even with memory loss",
     "You're my favorite adventure",
     "I love you to the moon and back",
-    "You're my happy place",
+    "You're my happy place. I hope I'm yours",
     "My favorite part of every day is you",
     "You're my favorite love story",
     "I'd recognize your heartbeat anywhere",
-    "You're my favorite kind of chaos",
     "I love you more than Kanye loves Kanye",
     "You're my favorite human",
-    "I'd swipe right on you in every lifetime",
-    "You're my favorite notification",
-    "I love you more than weekends",
-    "You're my favorite reason to smile",
+    "Are'nt you glad you downloaded boo",
+    "I love you more than you love food",
+    "You're my reason to smile",
     "I'd choose you in a hundred lifetimes",
-    "You're my favorite kind of perfect",
-    "I love you more than chocolate",
-    "You're my favorite dream come true",
-    "I'd pick you every single time",
+    "You're perfect",
+    "You're my dream come true",
     "You're my favorite kind of beautiful",
-    "I love you more than naps",
     "You're my favorite person to annoy",
     "I'd still fall for you every time",
     "You're my favorite kind of crazy",
-    "I love you more than wifi",
-    "You're my favorite everything"
+    "You're my everything"
 ];
 
 // 50+ FUNNY messages for WRONG answers
@@ -113,34 +135,28 @@ const funnyMessages = [
     "Were you distracted by your beauty? Try again 😍",
     "Wrong answer! Penalty: 10 kisses 💋",
     "Nope! Your fine is one date night 🎟",
-    "Bruh... even the dog knows this one",
+    "Bruh... even the Spongebob knows this one",
     "This hurt my soul a little... try again!",
     "Wrong! Do you even love me? 😂",
     "Nope! *boops nose* Try again",
     "Error: Requires butt smacks to continue",
     "Wrong! Now imitate your favorite animal",
     "Did you guess with your eyes closed? 👀",
-    "Were you raised by wolves? Try again!",
     "Incorrect! *grabs squishy cheeks*",
-    "Wrong answer = mandatory dance break!",
     "Mistakes mean you have to wear my hoodie",
     "Incorrect! *steals your fries*",
-    "Nope! *steals your hoodie*",
-    "Wrong! Now sing our song badly",
+    "Wrong! Now sing me a song",
     "Not even close! *pretends to cry*",
     "Wrong! Now say 'I'm adorable' 10 times",
-    "Even a magic 8-ball would get this right!",
     "This is why we can't have nice things!",
     "Wrong! *dramatic sigh* Try again",
-    "Nope! Your punishment is washing dishes",
     "Incorrect! *plays sad trombone sound*",
     "Wrong answer! *dramatic fainting*",
     "Did you sneeze while answering? Try again!",
     "Not even in the same universe!",
-    "Wrong! Now you owe me a foot rub",
+    "Wrong! Now you owe me some p... you know what try again",
     "Incorrect! *fakes crying*",
     "Nope! Now you have to cuddle me extra",
-    "Wrong! *steals your pillow*",
     "Even a goldfish would remember this!",
     "Incorrect! *tickles you*",
     "Wrong! Now do your sexy dance",
@@ -148,10 +164,8 @@ const funnyMessages = [
     "Wrong answer = 5 minutes of staring",
     "Incorrect! *pokes belly button*",
     "Wrong! Now make your best duck face",
-    "Nope! *steals your spot on the couch*",
     "Wrong answer = 10 pushups!",
     "Incorrect! *blows raspberry*",
-    "Wrong! Now say 'I'm too pretty to be smart'",
     "Nope! *steals your blanket*",
     "Wrong answer = funny face selfie!",
     "Incorrect! *steals your phone*",
