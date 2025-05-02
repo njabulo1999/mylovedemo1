@@ -103,7 +103,7 @@ const romanticMessages = [
     "100% match compatibility! 🧪",
     "You had me at 'sdakiwe sdakiwe sbal'...",
     "My favorite Good morning and hardest Goodnight",
-    "Every love story is beautiful, but ours is th only one that matters,
+    "Every love story is beautiful, but ours is th only one that matters",
     "I love you more than Burgers!",
     "You're my favorite thought every morning",
     "My heart recognized you first",
